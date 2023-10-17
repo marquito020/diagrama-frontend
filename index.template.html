@@ -1,0 +1,56 @@
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=5,IE=9" ><![endif]-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Model UML Editor</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/solid.css" integrity="sha384-Tv5i09RULyHKMwX0E8wJUqSOaXlyu3SQxORObAI08iUwIalMmN5L6AvlPX2LMoSE" crossorigin="anonymous"/>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/fontawesome.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous"/>
+	<script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="styles/grapheditor.css">
+	<script type="text/javascript">
+		// Parses URL parameters. Supported parameters are:
+		// - lang=xy: Specifies the language of the user interface.
+		// - touch=1: Enables a touch-style user interface.
+		// - storage=local: Enables HTML5 local storage.
+		// - chrome=0: Chromeless mode.
+		var urlParams = (function(url)
+		{
+			var result = new Object();
+			var idx = url.lastIndexOf('?');
+
+			if (idx > 0)
+			{
+				var params = url.substring(idx + 1).split('&');
+
+				for (var i = 0; i < params.length; i++)
+				{
+					idx = params[i].indexOf('=');
+
+					if (idx > 0)
+					{
+						result[params[i].substring(0, idx)] = params[i].substring(idx + 1);
+					}
+				}
+			}
+
+			return result;
+		})(window.location.href);
+
+		mxBasePath = 'js/__globals__/mxgraph/src';
+
+		// Default resources are included in grapheditor resources
+		mxLoadResources = false;
+		</script>
+	<script type="text/javascript" src="js/__globals__/Init.js"></script>
+	<script type="text/javascript" src="js/__globals__/jscolor/jscolor.js"></script>
+	<script type="text/javascript" src="js/__globals__/sanitizer/sanitizer.min.js"></script>
+	<script type="text/javascript" src="js/__globals__/mxgraph/mxClient.js"></script>
+	<script type="text/javascript" src="js/__globals__/Editor.js"></script>
+	<script type="text/javascript" src="js/__globals__/Graph.js"></script>
+	<script type="text/javascript" src="js/__globals__/Shapes.js"></script>
+	<script type="text/javascript" src="js/__globals__/Dialogs.js"></script>
+</head>
+<body class="geEditor"></body>
+</html>
